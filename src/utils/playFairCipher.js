@@ -8,7 +8,7 @@ function create2DArray() {
   return array;
 }
 
-export const playFairCipher = key => {
+export const playFairCipher = (text,key) => {
   const noSpaceKey = key.toLowerCase().replace(/\s/g, "");
   const keyLength = noSpaceKey.length;
   let keyInit = 0;

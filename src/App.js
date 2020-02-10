@@ -10,7 +10,7 @@ export default class App extends Component {
     keyVal: 0,
     plainText: "",
     cipherText: "",
-    error: false,
+    error: true,
     animation: "tada",
     duration: 500,
     visible: true
@@ -23,7 +23,9 @@ export default class App extends Component {
   onTextChange = e => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
+      error:false
+
     });
   };
   onReset = () => {
@@ -31,19 +33,20 @@ export default class App extends Component {
       keyVal: 0,
       plainText: "",
       cipherText: "",
-      error: false
+      error: true
     });
   };
   onInputChange = e => {
     const { value } = e.target;
     if (this.state.cipherType === "shift cipher") {
+
       if (value < 26 && value >= 0) {
         this.setState({
           keyVal: value,
           error: false
         });
       } else {
-        this.toggleVisibility()
+        this.toggleVisibility();
         this.setState({
           error: true
         });
@@ -67,14 +70,24 @@ export default class App extends Component {
     });
   };
   toggleVisibility = () =>
-  this.setState(prevState => ({ visible: !prevState.visible }));
+    this.setState(prevState => ({ visible: !prevState.visible }));
   render() {
-    const { cipherType, keyVal, cipherText, plainText } = this.state;
+    const {
+      cipherType,
+      keyVal,
+      cipherText,
+      plainText,
+      animation,
+      duration,
+      visible
+    } = this.state;
 
     return (
       <div className="app">
         <MainCard
-        toggleVisibility={this.toggleVisibility}
+          animation={animation}
+          duration={duration}
+          visible={visible}
           keyVal={keyVal}
           plainText={plainText}
           onInputChange={this.onInputChange}

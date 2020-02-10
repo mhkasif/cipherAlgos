@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon, Transition } from "semantic-ui-react";
+import { Transition } from "semantic-ui-react";
 import { Card } from "semantic-ui-react";
 import Nav from "./Nav/Nav";
 import DropDown from "./DropDown/DropDown";
@@ -9,10 +9,7 @@ import Buttons from "./Button/Buttons";
 import Key from "../Key/Key";
 
 export default class MainCard extends Component {
-
-
   render() {
-    const { animation, duration, visible } = this.props;
     const {
       cipherType,
       cipherText,
@@ -24,18 +21,22 @@ export default class MainCard extends Component {
       onInputChange,
       handleCipherTypeChange,
       onEncrypt,
-      onDecrypt
+      onDecrypt,
+      animation,
+      duration,
+      visible
     } = this.props;
 
     return (
       <Transition animation={animation} duration={duration} visible={visible}>
         <Card style={{ width: "70vw", height: "70vh" }}>
-          <Nav />
+          <Nav text={cipherType} />
           <DropDown handleCipherTypeChange={handleCipherTypeChange} />
           <Key
             type={cipherType === "shift cipher" ? "number" : ""}
             keyVal={keyVal}
             onInputChange={onInputChange}
+            error={error}
           />
           <TextAreas
             onTextChange={onTextChange}
@@ -43,9 +44,9 @@ export default class MainCard extends Component {
             plainText={plainText}
           />
           <Buttons
-          plainText={plainText}
-          cipherText={cipherText}
-          keyVal={keyVal}
+            plainText={plainText}
+            cipherText={cipherText}
+            keyVal={keyVal}
             onEncrypt={onEncrypt}
             onDecrypt={onDecrypt}
             cipherType={cipherType}
