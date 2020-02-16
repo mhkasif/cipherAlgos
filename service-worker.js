@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/shiftAndVigenereCipher/precache-manifest.2096c7caab29c41316dbbe287fd8b1cb.js"
+  "/shiftAndVigenereCipher/precache-manifest.5b476658ab3b3f4d1d2cada9278f561a.js"
 );
 
 self.addEventListener('message', (event) => {
