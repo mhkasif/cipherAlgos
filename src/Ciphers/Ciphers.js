@@ -2,7 +2,8 @@ export const Ciphers = [
   {
     key: "shiftCipher",
     text: "shift Cipher",
-    value: "shift cipher"
+    value: "shift cipher",
+
   },
   {
     key: "vigenereCipher",

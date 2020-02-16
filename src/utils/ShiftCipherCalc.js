@@ -17,6 +17,7 @@ export const shiftCipherEncryptCalc = (text, key) => {
   return cipherTextArray;
 };
 export const shiftCipherDecryptCalc = (text, key) => {
+
   const textArray = text.split("");
   let cipherTextArray = "";
   for (var i = 0; i < text.length; i++) {

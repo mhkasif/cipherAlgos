@@ -1,8 +1,22 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
 import "../../../styles/button.scss";
-import { shiftCipherEncryptCalc, shiftCipherDecryptCalc } from "../../../utils/ShiftCipherCalc";
-import { vigenereCipherEncryptCalc, vigenereCipherDecryptCalc } from "../../../utils/VigenereCipherCalc";
+import {
+  shiftCipherEncryptCalc,
+  shiftCipherDecryptCalc
+} from "../../../utils/ShiftCipherCalc";
+import {
+  vigenereCipherEncryptCalc,
+  vigenereCipherDecryptCalc
+} from "../../../utils/VigenereCipherCalc";
+import {
+  substitutionEncryptCipher,
+  substitutionDecryptCipher
+} from "../../../utils/substitutionCipher";
+import {
+  PlayFairCipherEncrypt,
+  PlayFairCipherDecrypt
+} from "../../../utils/playFairCipher";
 const Buttons = ({
   error,
   onEncrypt,
@@ -21,9 +35,10 @@ const Buttons = ({
         break;
 
       case "playFair cipher":
-        console.log("playfair cipher");
+        onEncrypt(PlayFairCipherEncrypt(plainText, keyVal));
         break;
       case "substitution cipher":
+        onEncrypt(substitutionEncryptCipher(plainText));
         break;
 
       default:
@@ -38,13 +53,16 @@ const Buttons = ({
         break;
 
       case "playFair cipher":
-        console.log("playfair cipher");
+
+        onDecrypt(PlayFairCipherDecrypt(cipherText, keyVal));
         break;
       case "substitution cipher":
+        onDecrypt(substitutionDecryptCipher(cipherText));
         break;
 
       default:
         onDecrypt(shiftCipherDecryptCalc(cipherText, keyVal));
+        break;
     }
   };
   return (

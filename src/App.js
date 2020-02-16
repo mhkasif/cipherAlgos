@@ -2,12 +2,11 @@ import React, { Component } from "react";
 
 import "./App.scss";
 import MainCard from "./Component/Card/MainCard";
-import { playFairCipher } from "./utils/playFairCipher";
 
 export default class App extends Component {
   state = {
     cipherType: "",
-    keyVal: 0,
+    keyVal: '',
     plainText: "",
     cipherText: "",
     error: true,
@@ -22,15 +21,19 @@ export default class App extends Component {
   };
   onTextChange = e => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-      error:false
-
-    });
+    const lastChar = value[value.length - 1];
+    if (isNaN(lastChar) || ' ')
+      this.setState({
+        [name]: value,
+        error: false
+      });
+    else {
+      this.toggleVisibility();
+    }
   };
   onReset = () => {
     this.setState({
-      keyVal: 0,
+      keyVal: undefined,
       plainText: "",
       cipherText: "",
       error: true
@@ -38,8 +41,9 @@ export default class App extends Component {
   };
   onInputChange = e => {
     const { value } = e.target;
-    if (this.state.cipherType === "shift cipher") {
+    const lastChar = value[value.length - 1];
 
+    if (this.state.cipherType === "shift cipher") {
       if (value < 26 && value >= 0) {
         this.setState({
           keyVal: value,
@@ -51,11 +55,15 @@ export default class App extends Component {
           error: true
         });
       }
-    } else
+    } else if (isNaN(lastChar)) {
       this.setState({
         keyVal: value,
         error: false
       });
+    }else{
+      this.toggleVisibility();
+
+    }
   };
   onEncrypt = cipherText => {
     // const { text, keyVal } = this.state;

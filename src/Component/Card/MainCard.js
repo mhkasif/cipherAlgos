@@ -7,6 +7,7 @@ import TextAreas from "./TextAreas/TextAreas";
 import "../../styles/main-card.scss";
 import Buttons from "./Button/Buttons";
 import Key from "../Key/Key";
+import { SubstitutionKey } from "../Key/SubstitutionKey";
 
 export default class MainCard extends Component {
   render() {
@@ -32,12 +33,16 @@ export default class MainCard extends Component {
         <Card style={{ width: "70vw", height: "70vh" }}>
           <Nav text={cipherType} />
           <DropDown handleCipherTypeChange={handleCipherTypeChange} />
-          <Key
-            type={cipherType === "shift cipher" ? "number" : ""}
-            keyVal={keyVal}
-            onInputChange={onInputChange}
-            error={error}
-          />
+          {cipherType === "substitution cipher" ? (
+            <SubstitutionKey />
+          ) : (
+            <Key
+              type={cipherType === "shift cipher" ? "number" : ""}
+              keyVal={keyVal}
+              onInputChange={onInputChange}
+              error={error}
+            />
+          )}
           <TextAreas
             onTextChange={onTextChange}
             cipherText={cipherText}
