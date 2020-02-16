@@ -19,5 +19,10 @@ export const Ciphers = [
     key: "playFairCipher",
     text: "playFair Cipher",
     value: "playFair cipher"
+  },
+  {
+    key: "railFenceCipher",
+    text: "railFence Cipher",
+    value: "railFence cipher"
   }
 ];
