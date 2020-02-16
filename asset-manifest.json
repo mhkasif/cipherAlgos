@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/shiftAndVigenereCipher/static/css/main.4fca63c0.chunk.css",
-    "main.js": "/shiftAndVigenereCipher/static/js/main.2ce07246.chunk.js",
-    "main.js.map": "/shiftAndVigenereCipher/static/js/main.2ce07246.chunk.js.map",
-    "runtime-main.js": "/shiftAndVigenereCipher/static/js/runtime-main.749cecf0.js",
-    "runtime-main.js.map": "/shiftAndVigenereCipher/static/js/runtime-main.749cecf0.js.map",
-    "static/css/2.a61a8ba2.chunk.css": "/shiftAndVigenereCipher/static/css/2.a61a8ba2.chunk.css",
-    "static/js/2.aa587c0f.chunk.js": "/shiftAndVigenereCipher/static/js/2.aa587c0f.chunk.js",
-    "static/js/2.aa587c0f.chunk.js.map": "/shiftAndVigenereCipher/static/js/2.aa587c0f.chunk.js.map",
-    "index.html": "/shiftAndVigenereCipher/index.html",
-    "precache-manifest.5b476658ab3b3f4d1d2cada9278f561a.js": "/shiftAndVigenereCipher/precache-manifest.5b476658ab3b3f4d1d2cada9278f561a.js",
-    "service-worker.js": "/shiftAndVigenereCipher/service-worker.js",
-    "static/css/2.a61a8ba2.chunk.css.map": "/shiftAndVigenereCipher/static/css/2.a61a8ba2.chunk.css.map",
-    "static/css/main.4fca63c0.chunk.css.map": "/shiftAndVigenereCipher/static/css/main.4fca63c0.chunk.css.map",
-    "static/js/2.aa587c0f.chunk.js.LICENSE.txt": "/shiftAndVigenereCipher/static/js/2.aa587c0f.chunk.js.LICENSE.txt",
-    "static/media/semantic.min.css": "/shiftAndVigenereCipher/static/media/outline-icons.ef60a4f6.woff"
+    "main.css": "/cipherAlgos/static/css/main.4fca63c0.chunk.css",
+    "main.js": "/cipherAlgos/static/js/main.8c1ac66d.chunk.js",
+    "main.js.map": "/cipherAlgos/static/js/main.8c1ac66d.chunk.js.map",
+    "runtime-main.js": "/cipherAlgos/static/js/runtime-main.87c94e8d.js",
+    "runtime-main.js.map": "/cipherAlgos/static/js/runtime-main.87c94e8d.js.map",
+    "static/css/2.1245604f.chunk.css": "/cipherAlgos/static/css/2.1245604f.chunk.css",
+    "static/js/2.aa587c0f.chunk.js": "/cipherAlgos/static/js/2.aa587c0f.chunk.js",
+    "static/js/2.aa587c0f.chunk.js.map": "/cipherAlgos/static/js/2.aa587c0f.chunk.js.map",
+    "index.html": "/cipherAlgos/index.html",
+    "precache-manifest.038f1f22b02dba92d5b1a86de82e0a1a.js": "/cipherAlgos/precache-manifest.038f1f22b02dba92d5b1a86de82e0a1a.js",
+    "service-worker.js": "/cipherAlgos/service-worker.js",
+    "static/css/2.1245604f.chunk.css.map": "/cipherAlgos/static/css/2.1245604f.chunk.css.map",
+    "static/css/main.4fca63c0.chunk.css.map": "/cipherAlgos/static/css/main.4fca63c0.chunk.css.map",
+    "static/js/2.aa587c0f.chunk.js.LICENSE.txt": "/cipherAlgos/static/js/2.aa587c0f.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/cipherAlgos/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.749cecf0.js",
-    "static/css/2.a61a8ba2.chunk.css",
+    "static/js/runtime-main.87c94e8d.js",
+    "static/css/2.1245604f.chunk.css",
     "static/js/2.aa587c0f.chunk.js",
     "static/css/main.4fca63c0.chunk.css",
-    "static/js/main.2ce07246.chunk.js"
+    "static/js/main.8c1ac66d.chunk.js"
   ]
 }
