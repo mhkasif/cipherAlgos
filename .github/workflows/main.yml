@@ -32,8 +32,11 @@ jobs:
         run: npm install
       
       - name: build project 
-        run: npm run build && cd /build
-        
+        run: npm run build 
+     
+      - name: change directory 
+        run: cd build 
+          
         
       - name: deploy on surge
         run: surge --domain http://ritzy-level.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
