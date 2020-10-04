@@ -31,7 +31,7 @@ jobs:
         uses: Borales/actions-yarn@v2.3.0
         
       - name: install dep 
-        run: npm install
+        run: yarn
     
       - name: GH Pages deploy
   # You may pin to the exact commit or the version.
