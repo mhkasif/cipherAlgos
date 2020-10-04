@@ -46,7 +46,7 @@ export const PlayFairCipherEncrypt = (text, key) => {
   const specialChar = [];
   playFairCipherMatrix(key);
   let cipherText = "";
-  text.split("").map((c, idx) => {
+  text.split("").forEach((c, idx) => {
     if (c === " ") {
       spaceIndex.push(idx);
     } else if (c.match(/[^a-z]/g)) {
