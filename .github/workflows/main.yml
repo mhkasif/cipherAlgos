@@ -27,6 +27,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: install surge 
         run: npm install --global surge
+      
+      - name: build project 
+        run: npm run build && cd /build
+        
         
       - name: deploy on surge
         run: surge --domain http://ritzy-level.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
