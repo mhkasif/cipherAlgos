@@ -25,11 +25,19 @@ jobs:
         uses: actions/setup-node@v1.4.2
 
       # Runs a set of commands using the runners shell
-      - name: install surge 
-        run: npm install --global surge
+      - name: GitHub Action for Yarn
+  # You may pin to the exact commit or the version.
+  # uses: Borales/actions-yarn@4965e1a0f0ae9c422a9a5748ebd1fb5e097d22b9
+        uses: Borales/actions-yarn@v2.3.0
         
       - name: install dep 
         run: npm install
     
+      - name: GH Pages deploy
+  # You may pin to the exact commit or the version.
+  # uses: Cecilapp/GitHub-Pages-deploy@10c15d01fe8f5100fdcc07f1568fe94bfa7b7d4c
+        uses: Cecilapp/GitHub-Pages-deploy@2.0.1
+
+
       - name: deploy on gh page
         run: npm run deploy 
